@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Naoned Makers : Néo aka Ironman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Naoned Makers</a></h1>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Néo aka Ironman</h2>
+							<p>Le plein de super-pouvoirs !</p>
+						</header>
+						<div class="row 150%">
+							<div class="8u 12u$(medium)">
+
+								<!-- Content -->
+									<section id="content">
+										<iframe width="100%" height="512" src="https://www.youtube.com/embed/3WJNfLLQYnY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+										<p>&nbsp;</p>
+										<h3>Inspiration</h3>
+										<p>Néo est largement inspiré de la minifig Lego&reg; Ironman.
+											Suite aux projets Léa et Léo, l'idée était de faire un automate à la conception robuste, facile à monter et à démonter pour maintenance.</p>
+										<p>Néo est imprimé à l'échelle 15:1, il mesure 66 cm de haut et pèse 4 Kg, visserie et matériel électronique inclus.</p>
+										
+										<h3>Modélisation 3D</h3>
+										<p>La modélisation 3D a été réalisée avec <a href="https://www.autodesk.com/products/fusion-360/overview" target="_new">Autodesk Fusion 360</a>.</p>
+										<P>Du <a href="https://grabcad.com/library/classic-lego-man-1" target="_new">modèle 3D d'origine</a> modélisé par Neil Lantto, seul l'aspect extérieur a été conservé. A l'intérieur des éléments, de nombreuses modifications ont été apportées.</p>
+										<ul>
+											<li>Les pré-trous de fixation pour tous les éléments ont été systématiquement modélisés. Des inserts métalliques ont été posés afin d'assurer la pérennité des pas de vis.</li>
+											<li>Le bras a été modifié pour accueillir un micro-servomoteur destiné à tourner la main. Les fils du servomoteurs passent dans un tube à l'intérieur du bras et ressortent dans le corps.</li>
+											<li>Le bras est fixé à l'aide d'un long palonnier sur un servomoteur Hitec lui-même fixé sur la partie arrière du corps.</li>
+											<li>Le corps a été coupé en 2 parties de manière à pouvoir retirer l'avant à la manière d'un couvercle. L'arrière du corps s'insère de haut en bas dans une glissière intégrée sur la partie centrale et fixée par vis. Le Raspberry Pi est fixé à la verticale.</li>
+											<li>L'avant du corps glisse de l'avant vers l'arrière et vient se fixer sur la partie centrale et sur l'arrière du corps.</li>
+											<li>Le cou est fixé entre les 2 parties du corps et supporte le servomoteur de la tête. Le cou supporte également le support du ring Néopixels et le support de caméra.</li>
+											<li>L'arrière de la tête a été coupé pour faciliter l'accès à l'espace disponible. Cet espace n'est pas exploité dans la version actuelle.</li>
+										</ul>
+										<p>Nous n'avions pas le temps de modéliser le casque plutôt complexe d'Ironman. Il s'agit donc d'une extrapolation du casque et de la visière disponibles dans la librairie <a href="http://www.ldraw.org/cgi-bin/ptscan.cgi?q=iron%20man" target=_new">LDraw.org</a>. Les yeux et le bas de la visière ont été découpés pour pouvoir être imprimés dans des couleurs différentes.
+											Le casque accueille un servomoteur capable de lever la visière. Un peu de ponçage a été nécessaire car il subsistait des frottements entre la casque et la visière avec les pièces sorties d'imprimante...</p>
+										<p>Les jambes sont vissées sur la partie centrale pour plus de stabilité.</p>
+										</p>
+
+										<h3>Impression 3D</h3>
+										<p>Néo a été imprimé sur <a href="https://www.raise3d.com/products/raise3d-n2-plus-pre-order-fdm-3d-printer" target="_new">Raise3D N2 Plus</a> - Infill 10% / 0.25</p>
+										<p>La durée d'Impression totale est supérieure à 350 Heures.</p>
+										<ul>
+											<li><a href="https://www.formfutura.com/shop/product/easyfil-pla-red-203?attrib=9-123" target="_new">PLA Rouge 1.75mm FormFutura</a></li>
+											<li><a href="http://www.esun3d.net/products/144.html" target="_new">PLA Gold 1.75mm Esun</a></li>
+											<li><a href="https://www.formfutura.com/shop/product/easyfil-pla-white-206?category=162&attrib=9-123&attrib=9-125" target="_new">PLA Blanc 1.75mm FormFutura</a></li>
+										</ul>
+
+										<h3>Code & Réseau</h3>
+										<ul>
+											<li>Néo communique en Wifi avec ses interfaces de pilotage.</li>
+											<li>Mouvement des moteurs : librairie Adafruit 16 channels Servo / PWM hat.</li>
+											<li>Passerelle cloud : si le réseau Wifi accède à Internet, Néo accepte alors des commandes via une passerelle SAAS. Ce module repose sur l’infrastructure <a href="https://firebase.google.com/" target="_new">Firebase</a> et <a href="https://dialogflow.com/" target="_new">DialogFlow</a> de Google et permet d'interagir avec Néo via Slack, Twitter ou <a href="https://developers.google.com/actions/" target="_new">Google assistant</a>.</li>
+											<li>Télécommande tactile : une télécommande tactile responsive est disponible pour piloter simplement l'automate (lever les bras, tourner les mains, lever la visière du casque) à partir d'un smartphone ou d'une tablette.</li>
+											<li>Reconnaissance et tracking de visage : OpenCV</li>
+											<li>Reconnaissance de mouvements : grâce à une Kinect disposée à l'extérieur, Néo reconnaît le mouvement du bras droit et le reproduit.</li>
+											<li>Commande vocale : Néo peut être commandé par la voix soit via un service SAAS de chat-bot, soit via une application Android dédiée. Ce dernier mode plus limité en terme de reconnaissance naturel du langage permet de traiter une dizaine de commandes vocales en mode offline.</li>
+											<li>Bus de message et Logique : l’ensemble des composants de Néo communiquent entre eux via des <a href="https://www.hivemq.com/blog/how-to-get-started-with-mqtt" target="_new">messages MQTT</a>. Les premiers types de message sont les commandes émises par les différentes interface de pilotage. Le cerveau logique de Néo priorise les sollicitations et les transforme en message de type <i>event</i> à destination des actionneurs de l’automate.</p></li>
+										</ul>
+										<p>
+									</section>
+
+							</div>
+							<div class="4u$ 12u$(medium)">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>Matériel</h3>
+											<p>Néo utilise les éléments suivants :</p>
+											<ul>
+												<li>1x <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/" target="_new">Raspberry Pi 3</a></li>
+												<li>1x <a href="https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview" target="_new">Adafruit 16 channels Servo / PWM hat</a></li>
+												<li>1x <a href="https://www.raspberrypi.org/products/camera-module-v2/" target="_new">Camera module Raspberry Pi</a></li>
+												<li>4x <a href="http://hitecrcd.com/products/servos/sport-servos/digital-sport-servos/hs-5645mg-high-torque-metal-gear-servo/product" target="_new">Servomoteurs Hitec HS5645MG</a></li>
+												<li>2x <a href="http://www.towerpro.com.tw/product/mh2-0h5g/" target="_new">Palonniers alu Towerpro</a></li>
+												<li>2x <a href="http://www.towerpro.com.tw/?product=mg92b" target="_new">Micro Servomoteurs Towerpro MG92B</a></li>
+												<li>1x <a href="https://fr.wikipedia.org/wiki/ESP8266" target="_new">NodeMCU ESP8266</a></li>
+												<li>1x <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels" target="_new">Ring Néopixels 16 leds</a></li>
+												<li>2x <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels" target="_new">Strips Néopixels 8 leds</a></li>
+												<li><a href="http://fr.farnell.com/webapp/wcs/stores/servlet/ProductDisplay?catalogId=10001&langId=-2&urlRequestType=Base&partNumber=2474926&storeId=10160" target="_new">Inserts métalliques M3</a> + Vis M3</li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h3>La décoration</h3>
+											<p>Les stickers Ironman ont été reproduits sous Adobe Illustrator au format vectoriel sur la base de <a href="http://fr.lego.wikia.com/wiki/Iron_Man" target="_new">l'armure Mark 42</a>.</p>
+											<p>Ils ont été imprimés sur <a href="https://www.photopaperdirect.com/products/A4-Gloss-Vinyl-Self-Adhesive-Sticker-Paper.html" target="_new">papier vinyle pour imprimante jet d'encre</a> et protégés par l'application d'un <a href="https://www.photopaperdirect.com/products/Inkjet-Fixative-Varnish-Spray-Glossy-400ml.html" target="_new">vernis en spray</a>.</p>
+										</section>
+										<hr />
+										<section>
+											<h3>Réalité augmentée</h3>
+											<p>Une application Android native permet de visualiser l'intérieur de l'automate. Cette application a été réalisée avec <a href="https://vuforia.com/" target="_new">Vuforia</a> + <a href="https://unity3d.com/fr/unity" target="_new">Unity3D</a></p>
+											<p>Vuforia est utilisé pour générer les marqueurs reconnus par l'application. Le marquer déclaré ici est le plastron d'Ironman.</p>
+											<p>Unity3D est le moteur de rendu 3D utilisé pour générer la scène 3D et la manière dont doit s'afficher le modèle 3D lorsque l'application détecte le marqueur.</p>
+										</section>
+										<hr />
+										<section>
+												<h3>Fichiers source</h3>
+										<ul class="actions">
+											<li><a href="https://github.com/naoned-makers" target="_new" class="button">Github</a></li>
+											<li><a href="https://www.thingiverse.com/thing:2609541" target="_new" class="button">Thingiverse</a></li>
+										</ul>
+										</section>										
+									</section>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://twitter.com/naoned_makers" target="_new" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://github.com/naoned-makers" target="_new" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Ce projet est un hommage aux figurines Lego&reg;. Lego&reg; est une marque commerciale du groupe LEGO qui ne sponsorise, n'autorise et ne soutient pas ce projet.</li>
+					</ul>
+					<ul class="copyright">
+							<li>Source code &amp; 3D models licensed under the <a href="http://creativecommons.org/licenses/by-nc/3.0/" target="_new">Creative Commons - Attribution - Non-Commercial license</a></li>
+						</ul>
+					<ul class="copyright">
+						<li>&copy; Naoned Makers. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_new">HTML5 UP</a> modified by <a href="https://twitter.com/scxpro" target="_new">@SCxPro</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
